@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="color_white">#ffffffff</color>
+	<color name="color_black">#ff000000</color>
+	
+	<color name="txt_unfoucs_in_sort">#ff989898</color>
+	<color name="txt_foucs_in_sort">#ff000000</color>
+	
+	<color name="txt_unfocus_inner_list">#ff949494</color>
+	<color name="txt_focus_inner_list">#ffff0000</color>
+</resources>
