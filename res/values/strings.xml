@@ -7,7 +7,7 @@
     <string name="txt_feedback">意见反馈</string>
     <string name="txt_about_us">关于我们</string>
     <string name="txt_check_for_updates">检查更新</string>
-    <string name="txt_city_switch">城市切换</string>
+    <string name="txt_city_switch">温馨提示</string>
     
 	<string name="txt_total_price">总价</string>
 	<string name="txt_unit_price">单价</string>
@@ -16,15 +16,17 @@
 	<string name="txt_apartment">户型</string>
     
     <string name="txt_search">搜索</string>
-    <string name="txt_recommend">在线盘点</string>
-    <string name="txt_my_center">离线盘点</string>
-    <string name="txt_sell">查询资产</string>
-    <string name="txt_rent">台帐维护</string>
+    <string name="txt_recommend">随机练习</string>
+    <string name="txt_my_center">顺序练习</string>
+    <string name="txt_sell">我的错题</string>
+    <string name="txt_rent">模拟考试</string>
     <string name="txt_school_district_room">盘点结果</string>
     <string name="txt_residential_housing">数据同步</string>
     
     
     <string name="warn_wether_to_exit">再按一次后退键退出应用程序!</string>
+    
+    <string name="orderList">顺序练习</string>
     
     
     

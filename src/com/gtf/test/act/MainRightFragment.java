@@ -186,16 +186,16 @@ public class MainRightFragment extends BaseFragment implements AdapterView.OnIte
 	
 	public ArrayList<City> getCities(){
 		ArrayList<City> list = new ArrayList<City>();
-		list.add(new City("莞城区", "", true));
-		list.add(new City("东城区", ""));
-		list.add(new City("南城区", ""));
-		list.add(new City("万江区", ""));
-		list.add(new City("石碣区", ""));
-		list.add(new City("石龙镇", ""));
-		list.add(new City("茶山镇", ""));
-		list.add(new City("石排镇", ""));
-		list.add(new City("企石镇", ""));
-		list.add(new City("横沥镇", ""));
+		list.add(new City("第一章", ""));
+		list.add(new City("第二章", ""));
+		list.add(new City("第三章", ""));
+		list.add(new City("第四章", ""));
+		list.add(new City("第五章", ""));
+		list.add(new City("第六章", ""));
+		list.add(new City("第七章", ""));
+		list.add(new City("第八章", ""));
+		list.add(new City("第九章", ""));
+		list.add(new City("第十章", ""));
 		return list;
 	}
 }

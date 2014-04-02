@@ -149,6 +149,7 @@ int layout slidingmenu_menu_2 0x7f030008
 int layout slidingmenumain 0x7f030009
 int string app_name 0x7f070000
 int string hello_world 0x7f070001
+int string orderList 0x7f070014
 int string txt_about_us 0x7f070004
 int string txt_apartment 0x7f07000b
 int string txt_area 0x7f070009

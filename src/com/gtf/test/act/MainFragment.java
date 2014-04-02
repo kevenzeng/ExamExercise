@@ -26,7 +26,7 @@ public class MainFragment extends BaseFragment {
 		return inflater.inflate(R.layout.my_main, null);
 	}
 
-	private SlidingMenu menu;
+	private static SlidingMenu menu;
 
 	private LinearLayout layoutSearchType;
 	private Button btnSearch;
@@ -91,11 +91,11 @@ public class MainFragment extends BaseFragment {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_more: {
-			this.menu.showMenu();
+			menu.showMenu();
 			break;
 		}
 		case R.id.btn_select_city: {
-			this.menu.showSecondaryMenu();
+			menu.showSecondaryMenu();
 			break;
 		}
 		}
@@ -139,7 +139,7 @@ public class MainFragment extends BaseFragment {
 				holder.img = (ImageView) convertView.findViewById(R.id.inner_img);
 				holder.txt = (TextView) convertView.findViewById(R.id.txt_tile);
 				holder.img.setOnClickListener(this.clickListener);
-				// holder.img.setOnTouchListener(this.touchListener);
+				holder.img.setOnTouchListener(this.touchListener);
 				convertView.setTag(holder);
 			} else {
 				holder = (MyHolder) convertView.getTag();
@@ -154,9 +154,13 @@ public class MainFragment extends BaseFragment {
 		}
 
 		private View.OnClickListener clickListener = new View.OnClickListener() {
+			
 			@Override
 			public void onClick(View v) {
 				((MyHolder) v.getTag()).data.type.toAct(context);
+				/*if(context.equals("MyCenter")){
+					this.menu.showSecondaryMenu();
+				}*/
 			}
 		};
 		private View.OnTouchListener touchListener = new View.OnTouchListener() {
@@ -175,28 +179,30 @@ public class MainFragment extends BaseFragment {
 	}
 
 	private static enum MyClassify {
+		
 		Recommend, MyCenter, Sell, Rent, SchoolDistrictRoom, ResidentialHousing;
-
+		
 		public void toAct(Context context) {
 			switch (this) {
 			case Recommend:
-				Toast.makeText(context, "代开发中.......", Toast.LENGTH_LONG).show();
+				Toast.makeText(context, "待开发中.......", Toast.LENGTH_LONG).show();
 				break;
 			case MyCenter:
-				Toast.makeText(context, "代开发中.......", Toast.LENGTH_LONG).show();
+				//Toast.makeText(context, "待开发中.......", Toast.LENGTH_LONG).show();
+				menu.showSecondaryMenu();//修改
 				break;
 			case Sell:
-				Toast.makeText(context, "代开发中.......", Toast.LENGTH_LONG).show();
+				Toast.makeText(context, "待开发中.......", Toast.LENGTH_LONG).show();
 				break;
 			case Rent:
-				Toast.makeText(context, "代开发中.......", Toast.LENGTH_LONG).show();
+				Toast.makeText(context, "待开发中.......", Toast.LENGTH_LONG).show();
 				break;
 			/*case SchoolDistrictRoom:
 
-				Toast.makeText(context, "代开发中.......", Toast.LENGTH_LONG).show();
+				Toast.makeText(context, "待开发中.......", Toast.LENGTH_LONG).show();
 				break;
 			case ResidentialHousing:
-				Toast.makeText(context, "代开发中.......", Toast.LENGTH_LONG).show();
+				Toast.makeText(context, "待开发中.......", Toast.LENGTH_LONG).show();
 				break;*/
 			}
 		}
@@ -224,5 +230,6 @@ public class MainFragment extends BaseFragment {
 		list.add(new MyData(R.drawable.ic_pic_residential_housing, R.string.txt_residential_housing, MyClassify.ResidentialHousing));*/
 		return list;
 	}
+	
 
 }
